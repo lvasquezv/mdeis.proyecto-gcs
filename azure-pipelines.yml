@@ -21,6 +21,7 @@ steps:
     echo Instalacion y Descarga de scala  MENSAJEEEEEEEEEEEEEEEEEEEE 
     
     echo Fin 2 Ejecutar test Unitario  MENSAJEEEEEEEEEEEEEEEEEEEE
+    echo Otromensaje de prueba
 
   displayName: 'Commit Check Phase'
 
