@@ -7,14 +7,20 @@ trigger:
 - master
 
 pool:
-  vmImage: ubuntu-latest
+  vmImage: 'Ubuntu-16.04'
 
-container: centos:7
-
-steps:
-- script: echo Compilar y correr las pruebas unitarias
-  displayName: 'Commit Check'
-
+steps: 
 - script: |
-    echo Correr las pruebas de integración
-  displayName: 'Integration Tests'
+    echo FASE DE VERIFICACION DE CONSTRUCCION
+    echo 1. Vamos a compilar la aplicacion MENSAJEEEEEEEEEEEEEEEEEEEE
+    echo Vamos a iniciar update MENSAJEEEEEEEEEEEEEEEEEEEE
+    sudo apt-get update
+    echo Vamos a iniciar java  MENSAJEEEEEEEEEEEEEEEEEEEE
+    sudo apt-get install openjdk-8-jdk
+    java -version
+    echo Instalacion y Descarga de scala  MENSAJEEEEEEEEEEEEEEEEEEEE 
+    
+    echo Fin 2 Ejecutar test Unitario  MENSAJEEEEEEEEEEEEEEEEEEEE
+
+  displayName: 'Commit Check Phase'
+
