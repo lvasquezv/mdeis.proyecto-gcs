@@ -14,15 +14,7 @@ steps:
     echo FASE DE VERIFICACION DE CONSTRUCCION
     echo 1. Vamos a compilar la aplicacion MENSAJEEEEEEEEEEEEEEEEEEEE
     echo Vamos a iniciar update MENSAJEEEEEEEEEEEEEEEEEEEE
-    sudo apt-get update
-    echo Vamos a iniciar java  MENSAJEEEEEEEEEEEEEEEEEEEE
-    sudo apt-get install openjdk-8-jdk
-    java -version
-    echo Instalacion y Descarga de scala  MENSAJEEEEEEEEEEEEEEEEEEEE 
-    
-    echo Fin 2 Ejecutar test Unitario  MENSAJEEEEEEEEEEEEEEEEEEEE
-    echo Otromensaje de prueba
-    echo otro mensaje para ver si sale error.
+    sudo apt-get update    
     echo probando nuevamente si ahora me deja ejecutar
 
   displayName: 'Commit Check Phase'
