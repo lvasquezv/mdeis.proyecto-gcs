@@ -22,6 +22,7 @@ steps:
     
     echo Fin 2 Ejecutar test Unitario  MENSAJEEEEEEEEEEEEEEEEEEEE
     echo Otromensaje de prueba
+    echo otro mensaje para ver si sale error.
 
   displayName: 'Commit Check Phase'
 
