@@ -11,12 +11,17 @@ pool:
 
 steps: 
 - script: |
-    echo FASE DE VERIFICACION DE CONSTRUCCION
-    echo 1. Vamos a compilar la aplicacion MENSAJEEEEEEEEEEEEEEEEEEEE
-    echo Vamos a iniciar update MENSAJEEEEEEEEEEEEEEEEEEEE
+    echo FASE DE CONSTRUCCION
+    echo 1. Vamos a compilar la aplicacion
+    echo Vamos a iniciar update
     sudo apt-get update    
-    echo probando nuevamente si ahora me deja ejecutar
-    echo por fin me aparecio para jobs paralelos
-
+    echo Vamos a instalar java
+    sudo apt-get install openjdk-8-jdk
+    java -version
+    echo Vamos a descargar e instalar Scala
+    wget www.scala-lang.org/files/archive/scala-2.12.10.deb
+    sudo dpkg -i scala*.deb
+    scala -version
+    echo SE COMPLETO LA COMPILACION DEL APK
   displayName: 'Commit Check Phase'
 
