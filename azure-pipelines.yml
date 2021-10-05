@@ -16,6 +16,7 @@ steps:
     echo Vamos a iniciar update MENSAJEEEEEEEEEEEEEEEEEEEE
     sudo apt-get update    
     echo probando nuevamente si ahora me deja ejecutar
+    echo por fin me aparecio para jobs paralelos
 
   displayName: 'Commit Check Phase'
 
