@@ -67,7 +67,7 @@ steps:
 
 - task: CopyFilesOverSSH@0
   inputs:
-    sshEndpoint: Azure Connection Server Web
+    sshEndpoint: Azure Connection Service
     sourceFolder: '/home/vsts/work/1/s/gcs-app/target/rpm/RPMS/noarch'
     contents: 'gcs-app-2.8.x-1.noarch.rpm'
     targetFolder: '/home/azureuser'
