@@ -76,3 +76,14 @@ steps:
     failOnEmptySource: true
 
   displayName: 'FASE DE DESPLIEGUE A SERVIDOR DE PRUEBAS - Copiar paquete al servidor de prueba'
+
+- task: SSH@0
+  inputs:
+    sshEndpoint: Azure Connection Server Web
+    runOptions: 'inline' 
+    inline: |
+     echo Vamos a instalar el APP
+     sudo rpm -i gcs-app-2.8.x-1.noarch.rpm
+     
+    readyTimeout: '20000'
+  displayName: 'FASE DE DESPLIEGUE A SERVIDOR DE PRUEBAS - Instalar y desplegar el paquete en el servidor de prueba'
