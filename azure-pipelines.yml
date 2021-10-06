@@ -73,8 +73,8 @@ steps:
     contents: 'gcs-app-2.8.x-1.noarch.rpm'
     targetFolder: '/home/azureuser'
     readyTimeout: '20000'
-    cleanTargetFolder: true
-    failOnEmptySource: true
+    #cleanTargetFolder: true
+    #failOnEmptySource: true
 
   displayName: 'FASE DE DESPLIEGUE A SERVIDOR DE PRUEBAS - Copiar paquete al servidor de prueba'
 
