@@ -110,3 +110,16 @@ steps:
    targetFolder: '/etc/nginx'
    readyTimeout: '20000'
   displayName: 'FASE DE DESPLIEGUE A SERVIDOR DE PRUEBAS - Configuracion de la aplicacion'
+
+- task: SSH@0
+  inputs:
+    sshEndpoint: Azure Connection Server Web
+    runOptions: 'inline' 
+    inline: |
+     echo Vamos a reiniciar el nginx y APP
+     sudo systemctl restart nginx
+     sudo systemctl restart gcs-app.service
+     echo Vamos habilitar el demonio
+     sudo setsebool -P httpd_can_network_connect on
+    readyTimeout: '20000'
+  displayName: 'FASE DE DESPLIEGUE A SERVIDOR DE PRUEBAS - Restablecer servicios'
