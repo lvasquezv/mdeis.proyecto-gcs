@@ -20,7 +20,7 @@ Vagrant.configure("2") do |config|
     v.cpus = 2
     config.vm.provision "shell", inline: $script
     config.vm.network "forwarded_port", guest: 9000, host: 9000
-    # config.vm.synced_folder "./", "/home/vagrant/proyecto-gcs"
+    config.vm.synced_folder "./", "/home/vagrant/proyecto-gcs"
   end
 end
 
