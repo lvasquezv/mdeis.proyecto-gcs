@@ -101,3 +101,12 @@ steps:
      echo App levantado
     readyTimeout: '20000'
   displayName: 'FASE DE DESPLIEGUE A SERVIDOR DE PRUEBAS - Instalar y desplegar el paquete en el servidor de prueba'
+
+- task: CopyFilesOverSSH@0
+  inputs:
+   sshEndpoint: Azure Connection Server Web
+   sourceFolder: '/home/vsts/'
+   contents: 'nginx.conf'
+   targetFolder: '/etc/nginx'
+   readyTimeout: '20000'
+  displayName: 'FASE DE DESPLIEGUE A SERVIDOR DE PRUEBAS - Configuracion de la aplicacion'
