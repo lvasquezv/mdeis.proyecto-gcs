@@ -1,6 +1,13 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\config",
+    "\\gcs-app",
+    "\\gcs-app\\app",
+    "\\gcs-app\\conf",
+    "\\gcs-app\\public",
+    "\\gcs-app\\scripts"
   ],
+  "SelectedNode": "\\gcs-app\\conf\\application.conf",
   "PreviewInSolutionExplorer": false
 }
