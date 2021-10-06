@@ -37,6 +37,13 @@ steps:
     echo Vamos a instalar docker
     sudo apt-get install docker-ce docker-ce-cli containerd.io
     sudo docker run hello-world
+    echo Vamos a instalar Alien para conversion de paquetes linux rpm
+    sudo add-apt-repository universe
+    sudo apt install alien
+    echo Vamos a crear el build
+    sudo sbt rpm:packageBin
+    echo Vamos a ejecutar el test unitario
+    sudo sbt test 
 
     echo SE COMPLETO LA COMPILACION DEL APK
   displayName: 'Commit Check Phase'
