@@ -48,22 +48,22 @@ steps:
     echo SE COMPLETO LA COMPILACION DEL APK
   displayName: 'FASE DE VERIFICACION DE CONTRIBUCION'
 
-- script: |
-    echo FASE DE VERIFICACION DE PRUEBAS DE INTEGRACION
-    echo Vamos a ejecutar las pruebas de integracion
-    sudo systemctl start docker
-    sudo docker run -i -e POSTGRES_PASSWORD=gcs -e POSTGRES_USER=gcs -e POSTGRES_DB=gcs -p 127.0.0.1:5432:5432  postgres:9.5
-    echo Listando
-    ls
-    echo Cambiar directorio
-    cd gcs-it
-    echo Listando
-    ls
-    echo Ejecutamos Test 
-    sudo sbt test
-    echo Fin de la FASE DE VERIFICACION DE PRUEBAS DE INTEGRACION
+#- script: |
+#    echo FASE DE VERIFICACION DE PRUEBAS DE INTEGRACION
+#    echo Vamos a ejecutar las pruebas de integracion
+#    sudo systemctl start docker
+#    sudo docker run -i -e POSTGRES_PASSWORD=gcs -e POSTGRES_USER=gcs -e POSTGRES_DB=gcs -p 127.0.0.1:5432:5432  postgres:9.5
+#    echo Listando
+#    ls
+#    echo Cambiar directorio
+#    cd gcs-it
+#    echo Listando
+#    ls
+#    echo Ejecutamos Test 
+#    sudo sbt test
+#    echo Fin de la FASE DE VERIFICACION DE PRUEBAS DE INTEGRACION
         
-  displayName: 'FASE DE VERIFICACION DE PRUEBAS DE INTEGRACION'
+#  displayName: 'FASE DE VERIFICACION DE PRUEBAS DE INTEGRACION'
 
 - task: CopyFilesOverSSH@0
   inputs:
