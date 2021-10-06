@@ -84,6 +84,12 @@ steps:
     inline: |
      echo Vamos a instalar el APP
      sudo rpm -i gcs-app-2.8.x-1.noarch.rpm
-     
+     echo Vamos a modificar usuario en el directorio
+     sudo chown -R gcs-app /usr/share/gcs-app/
+     sudo chgrp -R gcs-app /usr/share/gcs-app/
+     echo Vamos a reiniciar nginx y el app
+     sudo systemctl restart nginx
+     sudo systemctl restart gcs-app.service
+     echo App levantado
     readyTimeout: '20000'
   displayName: 'FASE DE DESPLIEGUE A SERVIDOR DE PRUEBAS - Instalar y desplegar el paquete en el servidor de prueba'
