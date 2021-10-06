@@ -11,7 +11,7 @@ pool:
 
 steps: 
 - script: |
-    echo FASE DE CONSTRUCCION
+    echo FASE DE VERIFICACION DE CONTRIBUCION
     echo 1. Vamos a compilar la aplicacion
     echo Vamos a iniciar update
     sudo apt-get update    
@@ -46,10 +46,10 @@ steps:
     sudo sbt test 
 
     echo SE COMPLETO LA COMPILACION DEL APK
-  displayName: 'Commit Check Phase'
+  displayName: 'FASE DE VERIFICACION DE CONTRIBUCION'
 
 - script: |
-    echo FASE DE PRUEBAS DE INTEGRACION
+    echo FASE DE VERIFICACION DE PRUEBAS DE INTEGRACION
     echo Vamos a ejecutar las pruebas de integracion
     sudo systemctl start docker
     sudo docker run -i -e POSTGRES_PASSWORD=gcs -e POSTGRES_USER=gcs -e POSTGRES_DB=gcs -p 127.0.0.1:5432:5432  postgres:9.5
@@ -61,6 +61,15 @@ steps:
     ls
     echo Ejecutamos Test 
     sudo sbt test
-    echo Fin de la ejecucion de integracion
+    echo Fin de la FASE DE VERIFICACION DE PRUEBAS DE INTEGRACION
         
-  displayName: 'Integration Test Phase'
+  displayName: 'FASE DE VERIFICACION DE PRUEBAS DE INTEGRACION'
+
+- task: CopyFilesOverSSH@0
+  inputs:
+    sshEndpoint: 'ssh-key'
+    sourceFolder: '/home/vsts/work/1/s/gcs-app/target/rpm/RPMS/noarch'
+    contents: 'gcs-app-2.8.x-1.noarch.rpm'
+    targetFolder: '/home/azureuser'
+    readyTimeout: '20000'
+  displayName: 'FASE DE DESPLIEGUE A SERVIDOR DE PRUEBAS - Copiar paquete al servidor de prueba'
