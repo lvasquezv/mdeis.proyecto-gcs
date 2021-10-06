@@ -30,6 +30,13 @@ steps:
     echo Vamos a instalar git
     sudo apt install git
     git -version
+    echo Vamos a instalar Which para saber la ruta de nuestro ejecutable
+    sudo apt install which
+    echo Vamos a instalar YUm para la gestion de paquetes RPM
+    sudo apt-get install -y yum-utils
+    echo Vamos a instalar docker
+    sudo apt-get install docker-ce docker-ce-cli containerd.io
+    sudo docker run hello-world
 
     echo SE COMPLETO LA COMPILACION DEL APK
   displayName: 'Commit Check Phase'
