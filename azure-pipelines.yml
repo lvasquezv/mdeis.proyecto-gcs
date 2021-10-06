@@ -48,7 +48,7 @@ steps:
     echo SE COMPLETO LA COMPILACION DEL APK
   displayName: 'Commit Check Phase'
 
-  - script: |
+- script: |
     echo FASE DE PRUEBAS DE INTEGRACION
     echo Vamos a ejecutar las pruebas de integracion
     sudo systemctl start docker    
