@@ -67,9 +67,12 @@ steps:
 
 - task: CopyFilesOverSSH@0
   inputs:
-    sshEndpoint: Azure Connection Service
+    sshEndpoint: Azure Connection Server Web
     sourceFolder: '/home/vsts/work/1/s/gcs-app/target/rpm/RPMS/noarch'
     contents: 'gcs-app-2.8.x-1.noarch.rpm'
     targetFolder: '/home/azureuser'
     readyTimeout: '20000'
+    cleanTargetFolder: true
+    failOnEmptySource: true
+
   displayName: 'FASE DE DESPLIEGUE A SERVIDOR DE PRUEBAS - Copiar paquete al servidor de prueba'
