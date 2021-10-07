@@ -89,9 +89,9 @@ steps:
      sudo systemctl stop gcs-app.service
      sleep 2
      echo Desinstalamos el app
-     sudo rm /usr/share/gcs-app/RUNNING_PID
-     sleep 10
      sudo rpm -e gcs-app
+     sleep 10
+     sudo rm /usr/share/gcs-app/RUNNING_PID
      sleep 10
      echo Eliminamos el directorio
      sudo rm -rf /usr/share/gcs-app/
