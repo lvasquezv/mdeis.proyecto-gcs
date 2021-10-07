@@ -4,10 +4,13 @@
     "\\config",
     "\\gcs-app",
     "\\gcs-app\\app",
+    "\\gcs-app\\app\\controllers",
+    "\\gcs-app\\app\\views",
     "\\gcs-app\\conf",
     "\\gcs-app\\public",
-    "\\gcs-app\\scripts"
+    "\\gcs-app\\scripts",
+    "\\gcs-app\\test"
   ],
-  "SelectedNode": "\\gcs-app\\conf\\application.conf",
+  "SelectedNode": "\\config\\pg_hba.conf",
   "PreviewInSolutionExplorer": false
 }
