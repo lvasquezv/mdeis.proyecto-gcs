@@ -126,6 +126,7 @@ steps:
     runOptions: 'inline' 
     inline: |
      echo Vamos a reiniciar el nginx y APP
+     sudo rm /usr/share/gcs-app/RUNNING_PID
      sudo systemctl restart nginx
      sudo systemctl restart gcs-app.service
      echo Vamos habilitar el demonio
