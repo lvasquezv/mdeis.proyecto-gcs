@@ -86,8 +86,11 @@ steps:
      sudo systemctl stop nginx
      sleep 2
      sudo systemctl stop gcs-app.service
-     sleep 2     
-     sudo rm -rf /usr/share/gcs-app/RUNNING_PID
+     sleep 2
+     sudo chown -R gcs-app /usr/share/gcs-app/
+     sudo chgrp -R gcs-app /usr/share/gcs-app/
+     sleep 5
+     sudo rm /usr/share/gcs-app/RUNNING_PID
      sleep 10
      echo Desinstalamos el app
      sudo rpm -e gcs-app     
