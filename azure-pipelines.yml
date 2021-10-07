@@ -75,7 +75,6 @@ steps:
     readyTimeout: '20000'
     #cleanTargetFolder: true
     #failOnEmptySource: true
-
   displayName: 'FASE DE DESPLIEGUE A SERVIDOR DE PRUEBAS - Copiar paquete al servidor de prueba'
 
 - task: SSH@0
