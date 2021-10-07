@@ -85,13 +85,18 @@ steps:
     inline: |
      echo Detenemos el nginx y el app
      sudo systemctl stop nginx
+     sleep 2
      sudo systemctl stop gcs-app.service
+     sleep 2
      echo Desinstalamos el app
      sudo rpm -e gcs-app
+     sleep 10
      echo Eliminamos el directorio
      sudo rm -rf /usr/share/gcs-app/
+     sleep 2
      echo Vamos a instalar el APP
      sudo rpm -i gcs-app-2.8.x-1.noarch.rpm
+     sleep 10
      echo Vamos a modificar usuario en el directorio
      sudo chown -R gcs-app /usr/share/gcs-app/
      sudo chgrp -R gcs-app /usr/share/gcs-app/
